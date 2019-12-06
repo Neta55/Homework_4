@@ -1,0 +1,205 @@
+body {
+    background-image: url("../images/TILE2.svg");
+    background-size: 20px;
+}
+
+body, input, button {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    color: rgb(0, 45, 140);
+    text-align: center;
+    font-weight: 100;
+  
+}
+.pamatne {
+    max-width: 992px;
+    background-color:white;
+    margin: 50px auto 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;  
+    margin-bottom: 10px;
+    
+}
+
+
+.login-input {
+    display: block;
+    border: none;
+    background-color: rgba(100, 135, 250, 0.1);
+   margin: 7px;
+    color:rgb(0, 45, 140);
+    width: 45%;
+    height: 30px;
+    font-size: 18px;
+    font-weight: 100;
+    text-indent: 18px;
+    border-radius: 5px;
+    box-shadow: none;
+
+}
+
+
+.userImage {
+    background: center / contain no-repeat url("../images/user.svg");
+    margin: 5px 0 5px 0px;
+    width: 40px;
+    height: 30px;
+    z-index: 5;
+}
+.addUserImage {
+    background: center / contain no-repeat url("../images/add-user.svg");
+
+    margin: 5px 0 5px 0px;
+    width: 40px;
+    height: 40px;
+
+ 
+    height: 30px;
+}
+
+.login-btn {
+    background: rgba(100, 135, 250, 0);
+    background: center / contain no-repeat url("../images/login2.svg");
+    background-size: 38px;
+    margin: 5px 5px 5px 5px;
+    width: 40px;
+    height: 40px;
+    box-shadow: none;
+border: 0px;
+outline: none;
+cursor: pointer;
+}
+
+.login-btn:hover {
+    background: center / contain no-repeat url("../images/login2_hov.svg");
+    background-size: 38px;
+}
+
+.item {
+    width: 99%;
+    min-height: 80px; 
+    background: rgba(100, 135, 250);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 40px;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    margin-left: 5px;
+}
+
+
+.item-input {
+    background: rgba(250, 250, 250, 0.8);
+    margin:  7px 7px 7px 15px;
+    color: darkblue;
+    width: 100%;
+    min-height: 50px;
+    font-size: 20px;
+    font-weight: 100;
+    text-indent: 20px;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 0px;
+    outline: none;
+}
+
+.add-btn {
+    background: center / contain no-repeat url("../images/add_white.svg");
+    background-size: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 4px;
+    box-shadow: none;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+    margin: 5px 18px 5px 5px;
+}  
+
+.add-btn:hover {
+    background: center / contain no-repeat url("../images/add.svg")  white;
+    background-size: 30px;
+
+}
+
+.todoList {
+    
+    display: flex;
+    align-items: center;
+    width: 99%;
+    min-height: 45px;
+    margin:  7px 7px 7px 5px;
+    color: rgb(0, 45, 140);
+    font-size: 20px;
+    font-weight: 100;
+    text-indent: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 40px;
+    border: 2px solid rgb(100, 135, 250);
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+.delete-btn {
+
+    background: center / contain no-repeat url("../images/delete.svg");
+    width: 50px;
+    height: 50px;
+    
+    
+background-size: 30px;
+margin: 4px;
+box-shadow: none;
+border: 0px;
+outline: none;
+cursor: pointer;
+/* margin: 5px 18px 5px 5px; */
+} 
+
+.delete-btn:hover {
+    background: center / contain no-repeat url("../images/delete_hov.svg");
+    background-size: 30px;
+}
+.submit-btn {
+
+    background: center / contain no-repeat url("../images/check.svg")  white;
+    width: 50px;
+    height: 50px;
+    background-size: 40px;
+    margin: 4px;
+    box-shadow: none;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+/* margin: 5px 18px 5px 5px; */
+} 
+
+.submit-btn:hover {
+    background: center / contain no-repeat url("../images/check_hov.svg") white;
+    background-size: 30px;
+}
+
+
+.todoText {
+    font-size: 20;
+    width: 85%;
+    color: rgb(0, 45, 140);
+    padding: 7px;
+    font-weight: 600;
+    
+}

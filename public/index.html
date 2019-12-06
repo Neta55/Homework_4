@@ -6,36 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mans uzdevumu saraksts</title>
-    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="../public/styles/style.css">
+    <script src="../public/scripts/main.js" defer></script>
 </head>
 
 <body>
-    <h1>Mans uzdevumu saraksts</h1>
-    <form action="" class="pamatne">
-
-        <div class="login">
-            <div class="images"></div>
-            <input class="login-input" type="text" id="user" placeholder="Šeit jāievada lietotājvārds">
-            <input class="login-input" type="text" id="pw" placeholder="Šeit jāievada parole">
-            <button id="login" class="login-btn"></button>
-            <button id="newUser" class="newUser-btn"></button>
-
-        </div>
-        <div class="item">
-            <input class="item-input" type="text" id="item" placeholder="Šeit jāievada darāmais">
-            <button class="add-btn" id="add"></button>
-        </div>
-        <div class="container">
-            <!-- vēl neizpildītie -->
-            <ul class="todo" id="todo"></ul>
-            <!-- izpildītie -->
-            <ul class="todo" id="completed"></ul>
-
-        </div>
 
 
 
 
+    <div class="pamatne">
+        <form action="">
+            <h1>MANS UZDEVUMU SARAKSTS</h1>
+
+
+
+            <div class="login">
+                <div class="userImage"></div>
+                <input class="login-input" type="text" name="userName" id="userName"
+                    placeholder="IEVADIET LIETOTĀJVĀRDU">
+                <input class="login-input" type="pasword" name="PW" id="PW" placeholder="IEVADIET PAROLI">
+                <button id="login" name="login" class="login-btn"></button>
+
+
+            </div>
+            <div class="login">
+                <div class="addUserImage"></div>
+                <input class="login-input" type="text" name="userName" id="userName"
+                    placeholder="IZVEIDOJIET LIETOTĀJVĀRDU">
+                <input class="login-input" type="pasword" name="PW" id="PW" placeholder="IZVEIDOJIET PAROLI">
+                <button id="login" name="login" class="login-btn"></button>
+            </div>
+            <br>
+            <div class="item">
+                <input class="item-input" type="text" name="item" id="item" placeholder="IZVEIDOJIET JAUNU UZDEVUMU">
+                <button class="add-btn" name="add" id="add"></button>
+            </div>
+            <div class="todoList">
+                <p class="todoText">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <button class="delete-btn" name="delete-btn" id="delete-btn"></button>
+                <button class="submit-btn" name="submit-btn" id="submit-btn"></button>
+
+
+            </div>
 
 
 
@@ -47,7 +60,11 @@
 
 
 
-    </form>
+        </form>
+
+    </div>
+
+
 
 </body>
 
