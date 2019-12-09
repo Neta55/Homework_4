@@ -1,5 +1,9 @@
 <?php
 require_once 'db.php';
+// if (!isset($_SESSION['username'])) {
+//     echo "<h2>Lai varētu apskatīt savu uzdevumu sarakstu, ir jāielogojas!</h2>";
+//     return;
+// }
 
 //sagatavot prasījumu un izpildīt
 $stmt = $conn->prepare("SELECT * FROM todotab");
@@ -13,29 +17,44 @@ $allRows = $stmt->fetchAll();
 
 //beigās var izdrukāt rezultātu
 
-echo "<div class='todoList'>";
 
-foreach ($allRows as $value) {
-    
-        echo "<div>";
-        echo "<input type='checkbox' class='submit-btn' name='submit-btn' id='submit-btn'>";
-        echo "<p class='todoText'>" .$value['todotasks']. "</p>";
-        echo  "<button class='delete-btn' name='delete-btn' id='delete-btn'></button>";
+echo "<div class='todoList'>";
+foreach ($allRows as $row) {
+     
+    if (isset($row['todoDone'])) {
+        $special = "Done-" . $row['todoDone'];
+    } else {
+        $special = "Done-null";
     }
+
+    echo "<p class='todoText' $special>" .$row['todotasks']. "</p>";
     
-    
-    // foreach ($row as $key => $value) {
-    //     echo "<p class='todoText'>$value</p>";
+    // echo "<input type='checkbox' value='" . $value['todoDone'] . "' class='submit-btn' name='taskDone'>"; 
+    echo "<div class=''>";
+    echo "<form action='updateToDo.php' method='post'>";
         
-    // }
-    echo "<form action='deleteToDo.php' method='post'>";
-    echo "<button name='delete-btn' value='" . $row['id'] . "'></button>";
+    foreach ($row as $key => $value) {
+    switch ($key) {
+            case 'todoDone':
+                //set checked to show if we have a set value
+                $checked = $value ? "checked" : "";
+                echo "<input type='checkbox' class='value-$key check-btn' name='$key' value='$key' $checked></input>";
+                break;
+            case 'todotasks':
+                echo "<input class='value-$key' name='$key' value='$value'></input>";
+                break;
+
+        }
+    }
+    echo "<button name='update' class='update-btn' value='" . $row['id'] . "'></button>";
     echo "</form>";
     echo "</div>";
 
+    
+    echo "<form action='deleteToDo.php' method='post'>";
+    echo "<button name='delete-btn' class='delete-btn' value='" . $row['id'] . "'></button>";
+    echo "</form>";
+    echo "</div>";
+}
 echo "</div>";
 
-// <div class="todoList">
-//                 <input type='checkbox' class='submit-btn' name='submit-btn' id='submit-btn'>
-//                 <p class='todoText'>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-//                 <button class='delete-btn' name='delete-btn' id='delete-btn'></button>
