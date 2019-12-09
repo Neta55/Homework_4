@@ -2,27 +2,15 @@
 require_once '../src/db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // echo "We got a POST request!<br>";
-    // foreach ($_POST as $key => $value) {
-    //     echo "<div class='info-text'>We received name $key with value $value </div>";
-    // }
-    // if (isset($_POST['myname'])) {
-    //     echo "Why hello there " . $_POST['myname'] . "! <hr>";
-    // }
-    // var_dump($_POST);
 
-    //we need to add song to database
-    $title = $_POST['title'];
-    $artist = $_POST['artist']; //FIXME when no artist exists
-    $length = $_POST['length'];
-    $user_id = 1; //TODO add real users
+    $todotasks = $_POST['todotasks'];
+    $user_id = 1; //kamēr nav citu šis ir stacionārais mans ievadītais
 
     // prepare and bind
-    $stmt = $conn->prepare("INSERT INTO tracks (title, artist, length, user_id)
-                            VALUES (:title, :artist, :length, :user_id)");
-    $stmt->bindParam(':title', $title);
-    $stmt->bindParam(':artist', $artist);
-    $stmt->bindParam(':length', $length);
+    $stmt = $conn->prepare("INSERT INTO todotab (todotasks, user_id) 
+    VALUES (:todotasks, :user_id)");
+    
+    $stmt->bindParam(':todotasks', $todotasks);
     $stmt->bindParam(':user_id', $user_id);
 
     $stmt->execute();

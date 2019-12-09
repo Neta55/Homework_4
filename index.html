@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="lv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inetas ToDo</title>
+    <link rel="stylesheet" href="public/styles/style.css">
+    <script src="../public/scripts/main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- šeit salauzts, augšējais ielikts head.php -->
+
+
+    <div class="header">
+
+
+        <div>
+            <h2>Jums ir nepieciešams reģistrēties vai ielogoties:</h2>
+            <form class="login" action="" method="">
+                <div class="userImage"></div>
+                <input class="login-input" type="text" name="userName" id="userName"
+                    placeholder="IEVADIET LIETOTĀJVĀRDU">
+                <input class="login-input" type="pasword" name="PW" id="PW" placeholder="IEVADIET PAROLI">
+                <button type="submit" id="login" name="login" class="login-btn"></button>
+            </form>
+
+        </div>
+        <!-- loginForm.php -->
+        <!-- <div>
+            <form class="login" action="" method="">
+                <div class="addUserImage"></div>
+                <input class="login-input" type="text" name="userName" id="userName"
+                    placeholder="IZVEIDOJIET LIETOTĀJVĀRDU">
+                <input class="login-input" type="pasword" name="PW" id="PW" placeholder="IZVEIDOJIET PAROLI">
+                <button type="submit" id="login" name="login" class="login-btn"></button>
+            </form>
+        </div> -->
+
+
+    </div>
+
+    <!-- šeit salauzts, augšējais ielikts registerForm.php -->
+
+    <div class="pamatne">
+        <h1>MANS UZDEVUMU SARAKSTS</h1>
+
+
+        <div>
+            <form action="get.php" method="GET" class="item">
+                <input class="item-input" type="text" name="todotasks" id="todotasks"
+                    placeholder="IZVEIDOJIET JAUNU UZDEVUMU">
+                <button class="add-btn" type="submit" name="submit" id="submit"></button>
+            </form>
+        </div>
+
+        <!-- šeit salauzts, augšējais ielikts addToDo.php -->
+
+        <div class="todoList">
+            <input type="checkbox" class="submit-btn" name="submit-btn" id="submit-btn">
+            <p class="todoText">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <button class="delete-btn" name="delete-btn" id="delete-btn"></button>
+
+
+
+        </div>
+
+        <div class="todoList">
+            <input type="checkbox" class="submit-btn" name="submit-btn" id="submit-btn">
+            <p class="todoText">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <button class="delete-btn" name="delete-btn" id="delete-btn"></button>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+</body>
+<footer>&copy; 2019</footer>
+
+</html>
