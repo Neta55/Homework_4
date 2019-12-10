@@ -1,3 +1,8 @@
+<?php
+if (!$_SESSION['username']) {
+    return;
+}
+?>
 
 <div class="pamatne">
         <h1>MANS UZDEVUMU SARAKSTS</h1>

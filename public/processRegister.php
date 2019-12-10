@@ -1,16 +1,17 @@
 <?php
+session_start();
 require_once '../src/db.php';
+require_once '../src/dbutils.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    //we need to add song to database
+    
     $username = $_POST['username'];
     if (strlen($_POST['password']) < 2) {
-        echo "Parole ir pārāk īsa!";
-        die("Par īsu!");
+        header('Location: /');
     }
     if ($_POST['password'] != $_POST['password2']) {
-        echo "Paroles nesakrīt!";
+        header('Location: /');
 
     }
     // you could check if password matches certain format
@@ -25,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $stmt->execute();
     //we go to our index.php or rather our root
-    header('Location: /');
+    checkLogin($conn, $username, $_POST['password']);
 } else {
-    echo "That was not a POST, most likely GET";
+    echo "Kaut kas nogāja greizi :(";
 }

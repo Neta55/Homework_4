@@ -1,10 +1,15 @@
 <?php
+session_start();
+if (!$_SESSION['id']) {
+    header('Location: /');
+    return; //lai varētu uzdevumus ievietot tikai reģistrēti lietitāji
+}
 require_once '../src/db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $todotasks = $_POST['todotasks'];
-    $user_id = 1; //kamēr nav citu šis ir stacionārais mans ievadītais
+    $user_id = $_SESSION['id'];
 
     // prepare and bind
     $stmt = $conn->prepare("INSERT INTO todotab (todotasks, user_id) 
@@ -17,5 +22,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //we go to our index.php or rather our root
     header('Location: /');
 } else {
-    echo "That was not a POST, most likely GET";
+    echo "Kaut kas nogāja greizi :(";
 }

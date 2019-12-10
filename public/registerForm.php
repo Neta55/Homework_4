@@ -1,9 +1,9 @@
 <?php
 require_once '../src/templates/head.php';
 ?>
-    <div class="header">
+    <div class="header1">
         <h2>Lai reģistrētos, lūdzu aizpildiet!</h2>
-        <form action="processRegister.php" method="post">
+        <form action="processRegister.php" method="post" class="login2">
         <div class="addUserImage"></div>
             <input class="login-input" type="text" name="username" placeholder="IZVEIDOJIET LIETOTĀJVĀRDU" required>
             <input class="login-input" type="password" name="password" required placeholder="IZVEIDOJIET PAROLI (min. 8 simboli)">
