@@ -65,7 +65,27 @@ h2 {
     margin-bottom: 10px;
     
 }
+.login3 {
+    max-width: 992px;
+    margin: 0 auto 0 auto;
+    display: flex;
+    align-items: center;
+    height: auto;
+    justify-content: center;  
+    
+}
+.login4 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: auto;
+    justify-content: center;  
+    
+}
 
+.margin-l-10 {
+    margin-left: 10px;
+}
 
 .login-input {
     display: block;
@@ -81,7 +101,24 @@ h2 {
     border-bottom: solid 1px;
     border-color:  white;;
     box-shadow: none;
+}
 
+.registr-btn {
+    background: rgba(100, 135, 250, 0);
+    background: center / contain no-repeat url("../images/add-user.svg");
+    background-size: 28px;
+    margin-left: 10px;
+    width: 33px;
+    height: 33px;
+    box-shadow: none;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+}
+
+.registr-btn:hover {
+    background: center / contain no-repeat url("../images/add-user-hov.svg");
+    background-size: 28px;
 }
 
 
@@ -114,9 +151,9 @@ h2 {
     width: 37px;
     height: 37px;
     box-shadow: none;
-border: 0px;
-outline: none;
-cursor: pointer;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
 }
 
 .login-btn:hover {
@@ -128,13 +165,14 @@ cursor: pointer;
     display: inline-block;
     background: center / contain no-repeat url("../images/logout.svg");
     background-size: 33px;
-    margin: 5px 10px 0px 0px;
-    width: 37px;
-    height: 26px;
+    margin: 0 0 0 10px;
+    padding: 0;
+    width: 33px;
+    height: 27px;
     box-shadow: none;
-border: 0px;
-outline: none;
-cursor: pointer;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
 }
 
 .logout-btn:hover {
@@ -213,7 +251,8 @@ cursor: pointer;
     width: 40px;
     height: 40px;  
     background-size: 30px;
-    margin-bottom: 7px;
+    margin-bottom: 0;
+    padding: 0;
     box-shadow: none;
     border: 0px;
     outline: none;
@@ -236,7 +275,8 @@ cursor: pointer;
     outline: none;
     cursor: pointer;
     -webkit-appearance: none;
-    margin-bottom: 5px;
+    margin-bottom: 0;
+    padding: 0;
 } 
 
 
@@ -269,7 +309,8 @@ cursor: pointer;
     outline: none;
     cursor: pointer;
     -webkit-appearance: none;
-    margin-bottom: 5px;
+    margin-bottom: 0;
+    padding: 0;
 } 
 
 
@@ -371,10 +412,8 @@ footer {
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
     width: auto;
     height: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 5;
   }
   
@@ -383,12 +422,19 @@ footer {
   }
 
   .edit-task {
+    border: 1px solid rgb(0, 45, 140);
+	border-left: 4px solid rgb(0, 45, 140);
     font-size: 16px;
-    width: 250px;
-    min-height: 160px;
-    white-space: normal;
-    text-overflow: initial;
-
+    width: 200px;
+    padding: 10px;
+    min-height: 200px;
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 
   }
 
+  title {
+      padding: 2px;
+      border-color: rgb(0, 45, 140);
+  }

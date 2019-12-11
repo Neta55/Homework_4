@@ -49,7 +49,7 @@ foreach ($allRows as $row) {
                 echo "<div class='todo_check'><input type='checkbox' class='check-btn' name='$key' value='$key' $checked></input></div>";
                 break;
             case 'todotasks':
-                echo "<div class='dropdown todo_edit'><div class='edit-btn'></div><div class='dropdown-content'><input class='edit-task' name='$key' value='$value'></div></div>";
+                echo "<div class='dropdown todo_edit' ><div class='edit-btn'></div><div class='dropdown-content'><textarea class='edit-task' name='$key' value='$value'>$value</textarea></div></div>";
                 break;
 
         }
