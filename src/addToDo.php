@@ -1,6 +1,8 @@
 <?php
+
 if (!$_SESSION['username']) {
     return;
+    
 }
 ?>
 

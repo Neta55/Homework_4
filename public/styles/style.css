@@ -9,7 +9,7 @@ body, input, button {
 }
 
 h1 {
-    color: rgb(100, 135, 250);
+    color: rgb(0, 45, 140);
     text-align: center;
     font-weight: 400;
   
@@ -262,7 +262,7 @@ cursor: pointer;
 
     background: center / contain no-repeat url("../images/update.svg") white;
     width: 40px;
-    height: 40px;
+    height: 50px;
     background-size: 33px;
     box-shadow: none;
     border: 0px;
@@ -285,15 +285,27 @@ cursor: pointer;
 .todoList {
    
     display: grid;
-    grid-template-columns: 72% 7% 7% 7% 7% ;
+    grid-template-columns: auto 50px;
     grid-template-rows: auto;
-    grid-template-areas: "todo_task" "todo_edit" "todo_update" "todo_check" "todo_delete";
+    grid-template-areas: "int-cont todo_delete";
     align-items: center;
     width: 99%;
     min-height: 15px;
     margin:  0px 0px 30px 5px;
     border-bottom: 2px solid rgb(100, 135, 250);
 }
+.int-cont {
+    width: 100%;
+    min-height: auto;
+    display: grid;
+    grid-template-columns: 50px auto 50px 50px;
+    grid-template-rows: auto;
+    grid-template-areas: "todo_check todo_task todo_edit todo_update";
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
 
 .todo_check {grid-area: todo_check}
 .todo_task {grid-area: todo_task}
@@ -314,11 +326,11 @@ cursor: pointer;
 .Done-1 {
     font-size: 20px;
     width: 95%;
-    color: rgb(0, 45, 140);
+    color:  rgb(100, 135, 250);
     padding-left: 15px;
     font-weight: 400;
     margin-bottom: 10px;
-    text-decoration: line-through;
+    /* text-decoration: line-through; */
     
 }
 
@@ -359,11 +371,9 @@ footer {
   .dropdown-content {
     display: none;
     position: absolute;
-    white-space: normal;
     background-color: #f9f9f9;
-    min-width: auto;
+    width: auto;
     height: auto;
-    text-overflow: clip;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 5;
   }
@@ -374,8 +384,11 @@ footer {
 
   .edit-task {
     font-size: 16px;
-    width: 160px;
+    width: 250px;
     min-height: 160px;
+    white-space: normal;
+    text-overflow: initial;
+
 
   }
 
