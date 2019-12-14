@@ -11,8 +11,8 @@ if (isset($_SESSION['username'])) {
     echo "<div class='header1'>"; 
     echo "<div class='login4'><h2>Lūdzu ielogojies vai reģistrējies</h2> <a href='registerForm.php'><button type='button' class='registr-btn'></button></a> </div>";
     echo "<form class='login2' action='processLogin.php' method='post'>";
-    echo "<div class='userImage'></div> <input name='username' class='login-input' placeholder='IEVADIET LIETOTĀJVĀRDU' required>";
-    echo "<input name='password' class='login-input' type='password' placeholder='IEVADIET PAROLI' required>";
+    echo "<div class='userImage'></div> <input name='username' class='login-input' placeholder='IEVADI LIETOTĀJVĀRDU' required>";
+    echo "<input name='password' class='login-input' type='password' placeholder='IEVADI PAROLI' required>";
     echo "<button type='submit' class='login-btn'></button>";
     echo "</form>";
     echo "</div>";

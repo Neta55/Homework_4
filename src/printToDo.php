@@ -14,9 +14,11 @@ if (!isset($_SESSION['username'])) {
 
 
 //sagatavot prasījumu un izpildīt
-$stmt = $conn->prepare("SELECT * FROM todotab WHERE (user_id = :user_id)");
+$stmt = $conn->prepare("SELECT * FROM todotab WHERE (user_id = :user_id) ORDER BY created DESC");
 $stmt->bindParam(':user_id', $_SESSION['id']);
 $stmt->execute();
+
+
 
 // uzstāda, lai rindiņas nāktu ārā masīva režīmā
 $isFetchModeSet = $stmt->setFetchMode(PDO::FETCH_ASSOC);
@@ -36,6 +38,9 @@ foreach ($allRows as $row) {
         $special = "Done-null";
     }
    
+
+
+    
     echo "<div class='todoList'>";
     // echo "<div class='int-cont'>";
     echo "<form action='updateToDo.php' method='post' class='int-cont'>";
