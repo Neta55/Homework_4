@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header('Location: /?error=mismatch');
         exit();
     }
-    // you could check if password matches certain format
+    // pārbauda paroli vai pareizs hash
     $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
     
     // prepare and bind
@@ -24,14 +24,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
         $stmt->execute();
     } catch (PDOException $error) {
-        // var_dump($error);
-        if ($error->errorInfo[1] == 1062) { //1062 -  duplicate entry error code
+      
+        if ($error->errorInfo[1] == 1062) { //1062 -  īpašais šīs kļūdas kods
             header('Location: /?error=userexists');
             exit();
         } else {
-            throw $error; //this will pass other error back up the normal control chain
+            throw $error; //atgriež, ja cita kļūda
         }
     }
-    //we go to our index.php or rather our root
+    
     checkLogin($conn, $username, $_POST['password']);
 }
