@@ -15,11 +15,13 @@ function checkLogin($conn, $username, $password)
         $hash = $allRows[0]['hash'];
         // print_r($hash);
         if (password_verify($password, $hash)) {
-            echo "<br>Login Worked!";
+            header('Location: /');
             $_SESSION['username'] = $username;
             $_SESSION['id'] = (int) $allRows[0]['id'];
         } else {
-            echo "<br>Login Failed";
+            echo 'Pierakstīties neizdevās! Nepareizs lietotājvārds vai parole.';
+            // echo "<script>alert('Pierakstīties neizdevās! Nepareizs lietotājvārds vai parole.')</script>";
+            
         }
     }
     header('Location: /');

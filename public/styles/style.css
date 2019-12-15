@@ -207,9 +207,7 @@ h2 {
 
 
 
-/* form {
-    width: 100%;
-} */
+
 .item-input {
     background: rgba(250, 250, 250, 0.8);
     margin:  7px 7px 7px 15px;
@@ -249,7 +247,7 @@ h2 {
 
 .delete-btn {
 
-    background: center / contain no-repeat url("../images/delete.svg");
+    background: center / contain no-repeat url("../images/delete_tumss.svg");
     width: 40px;
     height: 40px;  
     background-size: 25px;
@@ -266,9 +264,30 @@ h2 {
     background: center / contain no-repeat url("../images/delete_hov.svg");
     background-size: 25px;
 }
+
+.delete-btn-1 {
+
+    background: center / contain no-repeat url("../images/delete.svg");
+    width: 40px;
+    height: 40px;  
+    background-size: 25px;
+    margin-bottom: 0;
+    padding: 0;
+    box-shadow: none;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+
+} 
+
+.delete-btn-1:hover {
+    background: center / contain no-repeat url("../images/delete_hov.svg");
+    background-size: 25px;
+}
+
 .check-btn {
 
-    background: center / contain no-repeat url("../images/check.svg") white;
+    background: center / contain no-repeat url("../images/check_hov.svg") white;
     width: 40px;
     height: 40px;
     background-size: 29px;
@@ -285,7 +304,7 @@ h2 {
 
 .check-btn:hover {
 
-    background: center / contain no-repeat url("../images/check_hov.svg") white;
+    background: center / contain no-repeat url("../images/check.svg") white;
     background-size: 29px;
 }
 
@@ -302,6 +321,27 @@ h2 {
 
 .update-btn {
 
+    background: center / contain no-repeat url("../images/update_hov.svg") white;
+    width: 40px;
+    height: 50px;
+    background-size: 29px;
+    box-shadow: none;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-bottom: 0;
+    padding: 0;
+} 
+
+.update-btn:hover {
+
+    background: center / contain no-repeat url("../images/update.svg") white;
+    background-size: 29px;
+}
+
+.update-btn-1 {
+
     background: center / contain no-repeat url("../images/update.svg") white;
     width: 40px;
     height: 50px;
@@ -315,11 +355,47 @@ h2 {
     padding: 0;
 } 
 
-
-
-.update-btn:hover {
+.update-btn-1:hover {
 
     background: center / contain no-repeat url("../images/update_hov.svg") white;
+    background-size: 29px;
+}
+
+.edit-btn {
+
+    background: center / contain no-repeat url("../images/edit_hov.svg") white;
+    width: 40px;
+    height: 40px;
+    background-size: 29px;
+    box-shadow: none;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 5px;
+} 
+
+.edit-btn:hover {
+
+    background: center / contain no-repeat url("../images/edit.svg") white;
+    background-size: 29px;
+}
+
+.edit-btn-1 {
+
+    background: center / contain no-repeat url("../images/edit.svg") white;
+    width: 40px;
+    height: 40px;
+    background-size: 29px;
+    box-shadow: none;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 5px;
+} 
+
+.edit-btn-1:hover {
+
+    background: center / contain no-repeat url("../images/edit_hov.svg") white;
     background-size: 29px;
 }
 
@@ -389,24 +465,7 @@ footer {
     box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2);
 }
 
-.edit-btn {
 
-    background: center / contain no-repeat url("../images/edit.svg") white;
-    width: 40px;
-    height: 40px;
-    background-size: 29px;
-    box-shadow: none;
-    border: 0px;
-    outline: none;
-    cursor: pointer;
-    margin-bottom: 5px;
-} 
-
-.edit-btn:hover {
-
-    background: center / contain no-repeat url("../images/edit_hov.svg") white;
-    background-size: 29px;
-}
 .dropdown {
     display: inline-block;
   }
@@ -436,4 +495,18 @@ footer {
 
   }
 
+h3 {
+    width: 375px;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(90, 225, 225);
+    padding: 20px;
 
+    font-weight: 100;
+    line-height: 1.6;
+    color:  rgb(0, 32, 63);
+    text-align: center;
+    margin: 30px auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+}

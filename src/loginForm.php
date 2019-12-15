@@ -16,6 +16,23 @@ if (isset($_SESSION['username'])) {
     echo "<button type='submit' class='login-btn'></button>";
     echo "</form>";
     echo "</div>";
+    if (isset($_GET['error'])) {
+        switch ($_GET['error']) {
+            case 'shortpassword':
+                echo "<h3><strong>REĢISTRĒTIES NEIZDEVĀS!</strong> <br>Parole ir pārāk īsa, jāizmanto vismaz 5 burti vai simboli.<br>Ej atpakaļ uz reģistrācijas lapu un saskaiti zīmes!</h3>";
+                break;
+            case 'userexists':
+                echo "<h3><strong>REĢISTRĒTIES NEIZDEVĀS!</strong> <br>Lietotājs ar tādu vārdu jau eksistē.<br>Ej atpakaļ uz reģistrācijas lapu un izdomā citu!</h3>";
+                break;
+            case 'mismatch':
+                echo "<h3><strong>REĢISTRĒTIES NEIZDEVĀS!</strong> <br>Paroles nesakrīt. <br>Ej atpakaļ uz reģistrācijas lapu un esi uzmanīgāks!</h3>";
+                break;               
+            default:
+                echo "<h3>Tevi piereģistrēt neizdevās, jo: " . $_GET['error'] . "</h3>";
+                break;
+        }
+    }
+    
 }
 
 

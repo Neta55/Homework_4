@@ -8,6 +8,28 @@
     <title>Inetas ToDo</title>
     <link rel="stylesheet" href="public/styles/style.css">
     <script src="../public/scripts/main.js" defer></script>
+    <style>
+        .alert {
+            padding: 20px;
+            background-color: yellow;
+            color: white;
+        }
+
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .closebtn:hover {
+            color: black;
+        }
+    </style>
 </head>
 
 <body>
@@ -85,14 +107,30 @@
         </div>
 
 
-        <img src='images/add-user.svg' size='27'>
-
-        <a href='registerForm.php'><img src='images/add-user.svg' style='width:27px; height:27px' alt=''></a>
-
-        <a href='registerForm.php'><button type='button' class='registr-btn'></button></a>
 
 
+        <h2>Alert Messages</h2>
 
+        <p>Click on the "x" symbol to close the alert message.</p>
+        <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+        </div>
+
+
+        <h1>Popup/Modal Windows without JavaScript</h1>
+        <div class="box">
+            <a class="button" href="#popup1">Let me Pop up</a>
+        </div>
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                    Thank to pop me out of that button, but now i'm done so you can close this window.
+                </div>
+            </div>
+        </div>
 
 
     </div>

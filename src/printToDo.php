@@ -37,7 +37,24 @@ foreach ($allRows as $row) {
     } else {
         $special = "Done-null";
     }
-   
+    if (isset($row['todoDone'])) {
+        $editb = "edit-btn-" . (int) $row['todoDone'];
+    } else {
+        $editb = "edit-btn-null";
+    }
+
+    if (isset($row['todoDone'])) {
+        $updateb = "update-btn-" . (int) $row['todoDone'];
+    } else {
+        $updateb = "update-btn-null";
+    }
+
+    if (isset($row['todoDone'])) {
+        $deleteb = "delete-btn-" . (int) $row['todoDone'];
+    } else {
+        $deleteb = "delete-btn-null";
+    }
+
 
 
     
@@ -54,7 +71,7 @@ foreach ($allRows as $row) {
                 echo "<div class='todo_check'><input type='checkbox' class='check-btn' name='$key' value='$key' $checked></input></div>";
                 break;
             case 'todotasks':
-                echo "<div class='dropdown todo_edit' ><div class='edit-btn'></div><div class='dropdown-content'><textarea class='edit-task' name='$key' value='$value'>$value</textarea></div></div>";
+                echo "<div class='dropdown todo_edit' ><div class='edit-btn $editb'></div><div class='dropdown-content'><textarea class='edit-task' name='$key' value='$value'>$value</textarea></div></div>";
                 break;
 
         }
@@ -62,13 +79,13 @@ foreach ($allRows as $row) {
     
 
     
-    echo "<div class='todo_update'><button name='update' class='update-btn ' value='" . $row['id'] . "'></button></div>";
+    echo "<div class='todo_update'><button name='update' class='update-btn $updateb' value='" . $row['id'] . "'></button></div>";
     echo "</form>";
     // echo "</div>";
 
     
     echo "<form action='deleteToDo.php' method='post'>";
-    echo "<div class='todo_delete'><button name='delete-btn' class='delete-btn' value='" . $row['id'] . "'></button></div>";
+    echo "<div class='todo_delete'><button name='delete-btn' class='delete-btn $deleteb' value='" . $row['id'] . "'></button></div>";
     echo "</form>";
     echo "</div>";
 }
